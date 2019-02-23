@@ -8,7 +8,7 @@ podTemplate(label: 'docker-omnicore', containers: [
       container('docker') {
         def scmVars = checkout scm
         def VERSION = "0.4.0-alpine"
-        dir("${VERSION}/alpine") {
+        dir("${VERSION}") {
           sh "docker build -t santiment/omnicore:${VERSION} ."
 
           if (env.BRANCH_NAME == "master") {
