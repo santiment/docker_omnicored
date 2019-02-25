@@ -14,7 +14,7 @@ RUN apk update && \
     apk add --no-cache libressl boost libevent libtool libzmq boost-dev libressl-dev libevent-dev zeromq-dev
 
 RUN apk add --no-cache git autoconf automake g++ make file && \
-    git clone -b v0.3.1 https://github.com/OmniLayer/omnicore.git $BITCOIN_REPO && \
+    git clone -b v0.4.0 https://github.com/OmniLayer/omnicore.git $BITCOIN_REPO && \
     wget 'http://download.oracle.com/berkeley-db/db-4.8.30.NC.tar.gz' && \
     echo '12edc0df75bf9abd7f82f821795bcee50f42cb2e5f76a6a281b85732798364ef  db-4.8.30.NC.tar.gz' | sha256sum -c && \
     tar -xzf db-4.8.30.NC.tar.gz && \
