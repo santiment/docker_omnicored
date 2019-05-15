@@ -7,7 +7,7 @@ podTemplate(label: 'docker-omnicore', containers: [
     stage('Build Image') {
       container('docker') {
         def scmVars = checkout scm
-        def VERSION = "v0.4.0-alpine"
+        def VERSION = "v0.5.0-alpine"
         dir("${VERSION}") {
           sh "docker build -t santiment/omnicore:${VERSION} ."
 
